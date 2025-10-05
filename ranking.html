@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="es" data-bs-theme="dark">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,15 +9,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
 </head>
-<script defer src="./js/ranking.js"></script>
-
-
 <body class="bg-grid bg-page bg-ranking">
   <nav class="navbar navbar-expand-lg glassy sticky-top border-bottom border-primary-subtle mt-2">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
         <img src="img/perfilguild.gif" alt="Guild Logo"
-          style="width:32px;height:32px;border-radius:8px;object-fit:cover">
+             style="width:32px;height:32px;border-radius:8px;object-fit:cover">
         <span class="fw-bold">𝟕𝟕𝟕</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
@@ -31,7 +27,6 @@
           <li class="nav-item"><a class="nav-link active" href="ranking.html">Ranking</a></li>
           <li class="nav-item nav-live">
             <a class="nav-link" href="live.html">
-
               <span class="badge text-bg-danger ms-2 align-middle">LIVE</span>
             </a>
           </li>
@@ -94,38 +89,13 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- PUESTOS 4 AL 5 -->
+    <!-- PUESTOS 4 EN ADELANTE (el JS los llena) -->
     <section class="glassy rounded-4 p-3 p-md-4">
-      <h2 class="h5 mb-3"><i class="bi bi-award"></i></h2>
-
-      <ul class="rank-list m-0 p-0">
-        <!-- 4° -->
-        <li class="rank-row" style="--pct:.82">
-          <span class="rank-badge">4</span>
-          <span class="rank-name"></span>
-          <span class="rank-right">
-            <span class="rank-points" data-bs-toggle="tooltip" title="pts"></span>
-            <span class="rank-delta same" data-bs-toggle="tooltip" title="="><i class="bi bi-dash-lg"></i></span>
-            <span class="rank-tag">Normal</span>
-          </span>
-        </li>
-
-        <!-- 5° -->
-        <li class="rank-row" style="--pct:.70">
-          <span class="rank-badge">5</span>
-          <span class="rank-name"></span>
-          <span class="rank-right">
-            <span class="rank-points" data-bs-toggle="tooltip" title="pts"></span>
-            <span class="rank-delta same" data-bs-toggle="tooltip" title="="><i class="bi bi-dash-lg"></i></span>
-            <span class="rank-tag">Regular</span>
-          </span>
-        </li>
-      </ul>
-
+      <h2 class="h5 mb-3"><i class="bi bi-award"></i> Puestos 4 al 6</h2>
+      <ul class="rank-list m-0 p-0"></ul>
     </section>
   </main>
 
@@ -134,6 +104,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="./js/ranking.js"></script>
 </body>
-
 </html>

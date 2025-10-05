@@ -1,4 +1,3 @@
-
 (function () {
   const data = JSON.parse(localStorage.getItem("prixResults") || "[]");
   if (!Array.isArray(data) || data.length === 0) {
@@ -6,63 +5,53 @@
     return;
   }
 
-  
+  // Orden: primero por winsSubtotal; si empatan, por totalNet
   const sorted = data.slice().sort((a, b) =>
     (b.winsSubtotal - a.winsSubtotal) || (b.totalNet - a.totalNet)
   );
 
-  
-  const top = sorted.slice(0, 5);
+  // Tomamos hasta Top 6 (si hay menos jugadores, no falla)
+  const top = sorted.slice(0, Math.min(sorted.length, 6));
 
-  
+  // ------ Podio (Top 3) ------
   const podiumNames = document.querySelectorAll(".podium-card .name");
   if (podiumNames.length >= 3) {
-    podiumNames[0].textContent = top[1]?.name || ""; 
-    podiumNames[1].textContent = top[0]?.name || ""; 
-    podiumNames[2].textContent = top[2]?.name || ""; 
+    podiumNames[0].textContent = top[1]?.name ?? ""; // 2°
+    podiumNames[1].textContent = top[0]?.name ?? ""; // 1°
+    podiumNames[2].textContent = top[2]?.name ?? ""; // 3°
   }
 
- 
+  // ------ Lista 4° al 6° ------
   const list = document.querySelector("ul.rank-list");
   if (!list) return;
-
-  const ensureLi = (i) => {
-    let li = list.querySelectorAll("li.rank-row")[i];
-    if (!li) {
-      li = document.createElement("li");
-      li.className = "rank-row";
-      li.innerHTML = `
-        <span class="rank-badge"></span>
-        <span class="rank-name"></span>
-        <span class="rank-right">
-          <span class="rank-points"></span>
-          <span class="rank-delta same"><i class="bi bi-dash-lg"></i></span>
-          <span class="rank-tag"></span>
-        </span>`;
-      list.appendChild(li);
-    }
-    return li;
-  };
+  list.innerHTML = ""; // limpiar
 
   const maxPts = Math.max(1, top[0]?.winsSubtotal ?? 0);
 
+  // Genera filas para posiciones 4,5,6 (si existen)
+  top.slice(3).forEach((player, i) => {
+    const rankNum = i + 4; // 4,5,6
+    const li = document.createElement("li");
+    li.className = "rank-row";
 
-  for (let i = 0; i < 2; i++) {
-    const rankIdx = i + 3;      
-    const player  = top[rankIdx];
-    const li      = ensureLi(i);
-
-    li.querySelector(".rank-badge").textContent = String(rankIdx + 1);
-    li.querySelector(".rank-name").textContent  = player?.name ?? "";
-    li.querySelector(".rank-points").textContent = String(player?.winsSubtotal ?? 0);
-
-
-    const pct = player ? Math.max(0.2, Math.min(1, (player.winsSubtotal / maxPts) || 0)) : 0.2;
+    const pct = Math.max(0.2, Math.min(1, (player?.winsSubtotal ?? 0) / maxPts));
     li.style.setProperty("--pct", String(pct));
-  }
 
+    // Etiqueta simple según puesto (opcional)
+    const tag =
+      rankNum === 4 ? "Normal" :
+      rankNum === 5 ? "Regular" :
+      rankNum === 6 ? "Manco" : "";
 
-  list.querySelectorAll("li.rank-row").forEach((li, idx) => {
-    if (idx >= 2) li.remove();
+    li.innerHTML = `
+      <span class="rank-badge">${rankNum}</span>
+      <span class="rank-name">${player?.name ?? ""}</span>
+      <span class="rank-right">
+        <span class="rank-points" data-bs-toggle="tooltip" title="pts">${player?.winsSubtotal ?? 0}</span>
+        <span class="rank-delta same" data-bs-toggle="tooltip" title="="><i class="bi bi-dash-lg"></i></span>
+        <span class="rank-tag">${tag}</span>
+      </span>
+    `;
+    list.appendChild(li);
   });
 })();
