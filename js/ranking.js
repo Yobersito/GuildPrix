@@ -1,4 +1,4 @@
-// js/ranking.js
+
 (function () {
   const data = JSON.parse(localStorage.getItem("prixResults") || "[]");
   if (!Array.isArray(data) || data.length === 0) {
@@ -6,23 +6,23 @@
     return;
   }
 
-  // Orden descendente por puntos (winsSubtotal). Si empata, por totalNet.
+  
   const sorted = data.slice().sort((a, b) =>
     (b.winsSubtotal - a.winsSubtotal) || (b.totalNet - a.totalNet)
   );
 
-  // Top 1–6
-  const top = sorted.slice(0, 6);
+  
+  const top = sorted.slice(0, 5);
 
-  // Podio 2°, 1°, 3° (tu HTML lo muestra en ese orden visual)
+  
   const podiumNames = document.querySelectorAll(".podium-card .name");
   if (podiumNames.length >= 3) {
-    podiumNames[0].textContent = top[1]?.name || ""; // 2°
-    podiumNames[1].textContent = top[0]?.name || ""; // 1°
-    podiumNames[2].textContent = top[2]?.name || ""; // 3°
+    podiumNames[0].textContent = top[1]?.name || ""; 
+    podiumNames[1].textContent = top[0]?.name || ""; 
+    podiumNames[2].textContent = top[2]?.name || ""; 
   }
 
-  // Lista 4°–6°
+ 
   const list = document.querySelector("ul.rank-list");
   if (!list) return;
 
@@ -46,8 +46,9 @@
 
   const maxPts = Math.max(1, top[0]?.winsSubtotal ?? 0);
 
-  for (let i = 0; i < 3; i++) {
-    const rankIdx = i + 3;      // 3->4°, 4->5°, 5->6°
+
+  for (let i = 0; i < 2; i++) {
+    const rankIdx = i + 3;      
     const player  = top[rankIdx];
     const li      = ensureLi(i);
 
@@ -55,8 +56,13 @@
     li.querySelector(".rank-name").textContent  = player?.name ?? "";
     li.querySelector(".rank-points").textContent = String(player?.winsSubtotal ?? 0);
 
-    // barra visual vía CSS --pct (0.2 mínimo para que se vea)
+
     const pct = player ? Math.max(0.2, Math.min(1, (player.winsSubtotal / maxPts) || 0)) : 0.2;
     li.style.setProperty("--pct", String(pct));
   }
+
+
+  list.querySelectorAll("li.rank-row").forEach((li, idx) => {
+    if (idx >= 2) li.remove();
+  });
 })();
