@@ -39,9 +39,9 @@
 
     // Etiqueta simple según puesto (opcional)
     const tag =
-      rankNum === 4 ? "Normal" :
-      rankNum === 5 ? "Regular" :
-      rankNum === 6 ? "Manco" : "";
+      rankNum === 4 ? "A nada" :
+      rankNum === 5 ? "Manco 1" :
+      rankNum === 6 ? "Manco 2" : "";
 
     li.innerHTML = `
       <span class="rank-badge">${rankNum}</span>
