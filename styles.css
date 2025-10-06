@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --grid-color: rgba(124, 58, 237, 0.07);
 }
@@ -67,10 +66,9 @@ body {
   box-shadow: 0 0 24px rgba(124, 58, 237, 0.45), 0 0 64px rgba(6, 182, 212, 0.25);
 }
 
-/* Index: quita el glow azul del hero */
 .bg-index .hero-cover {
-  box-shadow: none; /* adiós borde/contorno azul */
-  border: 0; /* si además no quieres ningún borde */
+  box-shadow: none;
+  border: 0;
 }
 
 :focus-visible {
@@ -84,7 +82,6 @@ body {
     font-size: clamp(2rem, 7vw, 2.5rem);
   }
 }
-/* --- Sheet table styles (static, responsive) --- */
 .table.sheet {
   --bs-table-bg: rgba(7, 0, 48, 0.438);
   --bs-table-border-color: rgba(255, 0, 0, 0.18);
@@ -148,7 +145,6 @@ body {
   font-weight: 800;
 }
 
-/* Fondo global con imagen 'fondooriginal2.jpg' detrás de todo */
 body::before {
   content: "";
   position: fixed;
@@ -162,7 +158,6 @@ body::before {
   filter: saturate(1.05);
 }
 
-/* Mejora leve de botones gamer */
 .btn-primary {
   box-shadow: 0 0 24px rgba(124, 58, 237, 0.35);
   transition: transform 0.15s ease, box-shadow 0.2s ease;
@@ -177,12 +172,7 @@ body::before {
   padding: 1rem 0;
 }
 
-/* === PRIX: legibilidad (solo en esta página) === */
-.bg-prix {
-  /* tamaño un poco mayor */
-  /* texto principal en azul oscuro para contrastar con la luz del fondo */
-  /* WIN oscuro; LOSE rojo se mantiene */
-}
+/* === PRIX === */
 .bg-prix .table.sheet {
   font-size: 1.06rem;
 }
@@ -198,10 +188,8 @@ body::before {
 .bg-prix .sheet-subhead td,
 .bg-prix .sheet-cuentas > div {
   color: #ffffff;
-  /* azul oscuro */
   font-weight: 700;
   text-shadow: 0 1px 1px rgba(255, 0, 0, 0.25);
-  /* ayuda en zonas claras */
 }
 .bg-prix .sheet-block .win {
   color: #0b1b3f;
@@ -211,26 +199,19 @@ body::before {
   color: #ff6666;
 }
 
-/* --- PRIX: separadores verticales solo en la tabla de Prix --- */
+/* --- PRIX:  --- */
 .bg-prix .table.sheet > :not(caption) > * > * {
   border-right: 1px solid rgba(255, 255, 255, 0.22);
-  /* líneas verticales */
 }
 .bg-prix .table.sheet > :not(caption) > * > *:last-child {
   border-right: 0;
-  /* no duplicar el borde externo */
 }
 .bg-prix .sheet-head > th,
 .bg-prix .sheet-subhead th {
   border-right: 1px solid rgba(255, 255, 255, 0.28);
-  /* un poco más notorio en encabezados */
 }
 
-/* PRIX: centrar "PISADOR" y "CUENTAS" (primera columna de esas 2 filas) */
-.bg-prix {
-  /* Fila de encabezados de nombres */
-  /* Fila siguiente (la de CUENTAS) */
-}
+/* PRIX */
 .bg-prix .sheet-subhead > th:first-child {
   text-align: center !important;
   vertical-align: middle;
@@ -240,21 +221,14 @@ body::before {
   vertical-align: middle;
 }
 
-/* Alinear y dar ancho cómodo al encabezado lateral */
 .bg-prix .table.sheet :is(th, td):first-child {
-  width: 10.5rem; /* ajusta si quieres más/menos */
+  width: 10.5rem;
   vertical-align: middle;
 }
 
 /* ===========================
-   RANKING — estilos gamer
+   RANKING 
    =========================== */
-.bg-ranking {
-  /* Podio */
-  /* El 1° un poco más alto y con corona */
-  /* Lista 4–6 */
-  /* Responsive tweaks */
-}
 .bg-ranking .ranking-podium .podium-card {
   position: relative;
   border-radius: 1.25rem;
@@ -263,7 +237,6 @@ body::before {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  /* Brillo sutil detrás */
 }
 .bg-ranking .ranking-podium .podium-card:hover {
   transform: translateY(-4px);
@@ -380,20 +353,13 @@ body::before {
   }
 }
 
-/* RANKING: fondos oscuros tipo Prix + blur; texto claro */
-.bg-ranking {
-  /* Cards del podio */
-  /* Fila 4–6 */
-  /* Badge de posición: lo mantenemos con texto oscuro para contraste interno */
-}
+/* RANKING:  */
 .bg-ranking .ranking-podium .podium-card {
-  background: rgba(7, 0, 48, 0.438); /* igual que Prix */
+  background: rgba(7, 0, 48, 0.438);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-color: rgba(255, 255, 255, 0.18);
-  color: #ffffff; /* fuerza texto claro */
-  /* el icono dentro de la medalla queda oscuro, lo aclaramos para contraste */
-  /* o #111 si prefieres más oscuro */
+  color: #ffffff;
 }
 .bg-ranking .ranking-podium .podium-card .podium-body .pos,
 .bg-ranking .ranking-podium .podium-card .podium-body .name {
@@ -418,14 +384,7 @@ body::before {
   color: #0b0f19;
 }
 
-/* ===== RANKING: extras gamer ===== */
-.bg-ranking {
-  /* Ribbon en las tarjetas del podio */
-  /* Sparkles sutiles en el 1° */
-  /* Barra de progreso en cada fila (4–6) usando --pct */
-  /* Lado derecho: puntos + delta + tag */
-  /* Micro interacciones */
-}
+/* ===== RANKING ===== */
 .bg-ranking .ribbon {
   position: absolute;
   left: 0.75rem;
@@ -535,7 +494,6 @@ body::before {
   transform: translateY(-1px);
 }
 
-/* Sticky footer en todas las páginas (index, prix, ranking) */
 html, body {
   height: 100%;
 }
@@ -550,13 +508,11 @@ html, body {
   flex: 1 0 auto;
 }
 
-/* Footer con el MISMO fondo/blur que la barra de título */
 .footer {
-  /* reutiliza el fondo + blur + borde */
-  margin-top: auto; /* se pega abajo cuando hay poco contenido */
-  border-radius: 0; /* footer a lo ancho, sin esquinas redondas */
+  margin-top: auto;
+  border-radius: 0;
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.12); /* línea superior sutil */
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }/*# sourceMappingURL=styles.css.map */
