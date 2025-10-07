@@ -21,49 +21,29 @@
       class="navbar navbar-expand-lg glassy sticky-top border-bottom border-primary-subtle mt-2"
     >
       <div class="container">
-        <a
-          class="navbar-brand d-flex align-items-center gap-2"
-          href="index.html"
-        >
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
           <img
             src="img/perfilguild.gif"
             alt="Guild Logo"
-            style="
-              width: 32px;
-              height: 32px;
-              border-radius: 8px;
-              object-fit: cover;
-            "
+            style="width:32px;height:32px;border-radius:8px;object-fit:cover;"
           />
           <span class="fw-bold">𝟕𝟕𝟕</span>
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navMain"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navMain">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="prix.html">Prix</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ranking.html">Ranking</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="live.html">Videos</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="prix.html">Prix</a></li>
+            <li class="nav-item"><a class="nav-link" href="ranking.html">Ranking</a></li>
+            <li class="nav-item"><a class="nav-link" href="live.html">Videos</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
+    <!-- ÚNICO <main> DE LA PÁGINA -->
     <main class="container py-5">
       <div class="glassy p-4 p-md-5 rounded-4">
         <div class="d-flex align-items-center justify-content-between mb-3">
@@ -79,21 +59,17 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
             loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-          >
+            referrerpolicy="strict-origin-when-cross-origin">
           </iframe>
         </div>
       </div>
-    </main>
-    <main class="container py-5">
-      <div class="glassy p-4 p-md-5 rounded-4">
+
+      <div class="glassy p-4 p-md-5 rounded-4 mt-5">
         <div class="d-flex align-items-center justify-content-between mb-3">
           <h1 class="h3 fw-extrabold m-0 neon">
             <i class="bi bi-broadcast-pin me-2"></i>Enlaces de partidas
           </h1>
-          <span class="badge text-bg-primary d-none d-md-inline"
-            >DragonBound</span
-          >
+          <span class="badge text-bg-primary d-none d-md-inline">DragonBound</span>
         </div>
 
         <!-- Acordeón por jugador -->
@@ -101,211 +77,33 @@
           <!-- Frank -->
           <div class="accordion-item glassy rounded-3 mb-2">
             <h2 class="accordion-header" id="headFrank">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#colFrank"
-                aria-expanded="false"
-                aria-controls="colFrank"
-              >
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colFrank" aria-expanded="false" aria-controls="colFrank">
                 <i class="bi bi-person-fill me-2"></i> Frank
                 <span class="badge text-bg-secondary ms-2">19</span>
               </button>
             </h2>
-            <div
-              id="colFrank"
-              class="accordion-collapse collapse"
-              aria-labelledby="headFrank"
-              data-bs-parent="#accordionJugadores"
-            >
+            <div id="colFrank" class="accordion-collapse collapse" aria-labelledby="headFrank" data-bs-parent="#accordionJugadores">
               <div class="accordion-body">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/zSMf54"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 1</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/Umzgot"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 2</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/t37nUK"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 3</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/8SjaUf"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 4</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/L9cWeu"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 5</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/7cpdjv"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 6</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/KZA3bv"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 7</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/tsDSv3"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 8</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/Gd5TF6"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 9</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/K7ZnYz"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida
-                      10</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/ZbsmfT"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida
-                      11</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/xgXQmk"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida
-                      12</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/4WJjbt"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida
-                      13</a
-                    >
-                  </li>
-
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/n5uaLf"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida
-                      14</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/GzsJfR"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida
-                      15</a
-                    >
-                  </li>
-
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/LHdaxo"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida
-                      16</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/AiwXXp"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida
-                      17</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/4jCdfa"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida
-                      18</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/LELTj2"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida
-                      19</a
-                    >
-                  </li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/zSMf54" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 1</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/Umzgot" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 2</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/t37nUK" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 3</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/8SjaUf" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 4</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/L9cWeu" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 5</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/7cpdjv" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 6</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/KZA3bv" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 7</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/tsDSv3" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 8</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/Gd5TF6" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 9</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/K7ZnYz" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 10</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/ZbsmfT" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 11</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/xgXQmk" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 12</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/4WJjbt" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 13</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/n5uaLf" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 14</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/GzsJfR" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 15</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/LHdaxo" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 16</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/AiwXXp" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 17</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/4jCdfa" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 18</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/LELTj2" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 19</a></li>
                 </ul>
               </div>
             </div>
@@ -314,107 +112,23 @@
           <!-- Miguel -->
           <div class="accordion-item glassy rounded-3 mb-2">
             <h2 class="accordion-header" id="headMiguel">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#colMiguel"
-                aria-expanded="false"
-                aria-controls="colMiguel"
-              >
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colMiguel" aria-expanded="false" aria-controls="colMiguel">
                 <i class="bi bi-person-fill me-2"></i> Miguel
                 <span class="badge text-bg-secondary ms-2">9</span>
               </button>
             </h2>
-            <div
-              id="colMiguel"
-              class="accordion-collapse collapse"
-              aria-labelledby="headMiguel"
-              data-bs-parent="#accordionJugadores"
-            >
+            <div id="colMiguel" class="accordion-collapse collapse" aria-labelledby="headMiguel" data-bs-parent="#accordionJugadores">
               <div class="accordion-body">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/GQQmtd"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 1</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/pAY8ib"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 2</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/6UD44n"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 3</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/495dLo"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 4</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/mLaQ19"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 5</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/tKPp94"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 6</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/zPRNbV"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 7</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/AUQ1wC"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 8</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/nBz8gF"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 9</a
-                    >
-                  </li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/GQQmtd" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 1</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/pAY8ib" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 2</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/6UD44n" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 3</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/495dLo" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 4</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/mLaQ19" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 5</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/tKPp94" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 6</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/zPRNbV" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 7</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/AUQ1wC" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 8</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/nBz8gF" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 9</a></li>
                 </ul>
               </div>
             </div>
@@ -423,89 +137,21 @@
           <!-- Jean -->
           <div class="accordion-item glassy rounded-3 mb-2">
             <h2 class="accordion-header" id="headJean">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#colJean"
-                aria-expanded="false"
-                aria-controls="colJean"
-              >
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colJean" aria-expanded="false" aria-controls="colJean">
                 <i class="bi bi-person-fill me-2"></i> Jean
                 <span class="badge text-bg-secondary ms-2">7</span>
               </button>
             </h2>
-            <div
-              id="colJean"
-              class="accordion-collapse collapse"
-              aria-labelledby="headJean"
-              data-bs-parent="#accordionJugadores"
-            >
+            <div id="colJean" class="accordion-collapse collapse" aria-labelledby="headJean" data-bs-parent="#accordionJugadores">
               <div class="accordion-body">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/QLJWoW"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 1</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/bU9iZv"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 2</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/Knp7zk"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 3</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/uEFa3c"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 4</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/Hogd28"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 5</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/RnczkJ"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 6</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/orfU2E"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 7</a
-                    >
-                  </li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/QLJWoW" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 1</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/bU9iZv" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 2</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/Knp7zk" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 3</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/uEFa3c" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 4</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/Hogd28" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 5</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/RnczkJ" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 6</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/orfU2E" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 7</a></li>
                 </ul>
               </div>
             </div>
@@ -514,44 +160,16 @@
           <!-- Nicson -->
           <div class="accordion-item glassy rounded-3 mb-2">
             <h2 class="accordion-header" id="headNicson">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#colNicson"
-                aria-expanded="false"
-                aria-controls="colNicson"
-              >
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colNicson" aria-expanded="false" aria-controls="colNicson">
                 <i class="bi bi-person-fill me-2"></i> Nicson
                 <span class="badge text-bg-secondary ms-2">2</span>
               </button>
             </h2>
-            <div
-              id="colNicson"
-              class="accordion-collapse collapse"
-              aria-labelledby="headNicson"
-              data-bs-parent="#accordionJugadores"
-            >
+            <div id="colNicson" class="accordion-collapse collapse" aria-labelledby="headNicson" data-bs-parent="#accordionJugadores">
               <div class="accordion-body">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/T6wtBp"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 1</a
-                    >
-                  </li>
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/KA4aKu"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 2</a
-                    >
-                  </li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/T6wtBp" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 1</a></li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/KA4aKu" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 2</a></li>
                 </ul>
               </div>
             </div>
@@ -560,35 +178,15 @@
           <!-- Chino -->
           <div class="accordion-item glassy rounded-3 mb-2">
             <h2 class="accordion-header" id="headChino">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#colChino"
-                aria-expanded="false"
-                aria-controls="colChino"
-              >
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#colChino" aria-expanded="false" aria-controls="colChino">
                 <i class="bi bi-person-fill me-2"></i> Chino
                 <span class="badge text-bg-secondary ms-2">1</span>
               </button>
             </h2>
-            <div
-              id="colChino"
-              class="accordion-collapse collapse"
-              aria-labelledby="headChino"
-              data-bs-parent="#accordionJugadores"
-            >
+            <div id="colChino" class="accordion-collapse collapse" aria-labelledby="headChino" data-bs-parent="#accordionJugadores">
               <div class="accordion-body">
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    <a
-                      class="link-light text-decoration-none"
-                      href="https://dragonbound.net/r/JGnY2h"
-                      target="_blank"
-                      rel="noopener"
-                      ><i class="bi bi-box-arrow-up-right me-2"></i>Partida 1</a
-                    >
-                  </li>
+                  <li class="list-group-item"><a class="link-light text-decoration-none" href="https://dragonbound.net/r/JGnY2h" target="_blank" rel="noopener"><i class="bi bi-box-arrow-up-right me-2"></i>Partida 1</a></li>
                 </ul>
               </div>
             </div>
@@ -596,42 +194,38 @@
         </div>
         <!-- /accordion -->
       </div>
+
+      <!-- Comentarios (NO ES OTRO <main>) -->
+      <section class="container py-5" id="comentarios">
+        <div class="glassy p-4 rounded-4">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <h2 class="h4 fw-bold m-0">
+              <i class="bi bi-chat-dots me-2"></i>Comentarios
+            </h2>
+            <span class="badge text-bg-secondary d-none d-md-inline">Videos</span>
+          </div>
+          <div id="giscus_thread"></div>
+        </div>
+      </section>
     </main>
 
-    <!-- Comentarios -->
-<main class="container py-5">
-  <section id="comentarios">
-    <div class="glassy p-4 rounded-4">
-      <div class="d-flex align-items-center justify-content-between mb-3">
-        <h2 class="h4 fw-bold m-0">
-          <i class="bi bi-chat-dots me-2"></i>Comentarios
-        </h2>
-        <span class="badge text-bg-secondary d-none d-md-inline">Videos</span>
-      </div>
-
-      <!-- giscus inyecta un iframe con clase .giscus-frame -->
-      <div id="giscus_thread"></div>
-    </div>
-  </section>
-</main>
-
-<script src="https://giscus.app/client.js"
-  data-repo="Yobersito/GuildPrix"
-  data-repo-id="R_kpDOP79rmw"
-  data-category="General"
-  data-category-id="DIC_kwDOP79rm84CwXkG"
-  data-mapping="pathname"
-  data-strict="0"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="bottom"
-  data-theme="preferred_color_scheme"
-  data-lang="es"
-  crossorigin="anonymous"
-  async>
-</script>
-
-
+    <!-- Giscus -->
+    <script src="https://giscus.app/client.js"
+      data-repo="Yobersito/GuildPrix"
+      data-repo-id="R_kpDOP79rmw"
+      data-category="General"
+      data-category-id="DIC_kwDOP79rm84CwXkG"
+      data-mapping="specific"
+      data-term="live-videos"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="preferred_color_scheme"
+      data-lang="es"
+      crossorigin="anonymous"
+      async>
+    </script>
 
     <footer class="footer" id="contacto">
       <div class="container">
