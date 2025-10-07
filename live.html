@@ -598,21 +598,23 @@
       </div>
     </main>
 
-    <!-- Sección de comentarios -->
-<section class="mt-4" id="comentarios">
-  <div class="glassy p-4 rounded-4">
-    <div class="d-flex align-items-center justify-content-between mb-3">
-      <h2 class="h4 fw-bold m-0">
-        <i class="bi bi-chat-dots me-2"></i>Comentarios
-      </h2>
-      <span class="badge text-bg-secondary d-none d-md-inline">Videos</span>
+    <!-- Comentarios -->
+<main class="container py-5">
+  <section id="comentarios">
+    <div class="glassy p-4 rounded-4">
+      <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="h4 fw-bold m-0">
+          <i class="bi bi-chat-dots me-2"></i>Comentarios
+        </h2>
+        <span class="badge text-bg-secondary d-none d-md-inline">Videos</span>
+      </div>
+
+      <!-- giscus inyecta un iframe con clase .giscus-frame -->
+      <div id="giscus_thread"></div>
     </div>
+  </section>
+</main>
 
-    <div id="giscus_thread"></div>
-  </div>
-</section>
-
-<!-- Giscus -->
 <script src="https://giscus.app/client.js"
   data-repo="Yobersito/GuildPrix"
   data-repo-id="R_kpDOP79rmw"
@@ -628,6 +630,7 @@
   crossorigin="anonymous"
   async>
 </script>
+
 
 
     <footer class="footer" id="contacto">
