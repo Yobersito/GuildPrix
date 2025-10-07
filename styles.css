@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --grid-color: rgba(124, 58, 237, 0.07);
 }
@@ -77,8 +78,7 @@ body {
 }
 
 @media (max-width: 576px) {
-  .display-4,
-  .display-5 {
+  .display-4, .display-5 {
     font-size: clamp(2rem, 7vw, 2.5rem);
   }
 }
@@ -88,8 +88,7 @@ body {
   border: 1px solid rgba(255, 250, 250, 0.507);
 }
 
-.table.sheet th,
-.table.sheet td {
+.table.sheet th, .table.sheet td {
   vertical-align: middle;
 }
 
@@ -99,8 +98,7 @@ body {
   font-weight: 700;
 }
 
-.sheet-subhead th,
-.sheet-subhead td {
+.sheet-subhead th, .sheet-subhead td {
   background: rgba(7, 0, 48, 0.438);
   text-align: center;
   font-weight: 700;
@@ -116,8 +114,7 @@ body {
   padding: 0.35rem 0.15rem;
 }
 
-.sheet-block th,
-.sheet-block td {
+.sheet-block th, .sheet-block td {
   background: rgba(7, 0, 48, 0.438);
   text-align: center;
 }
@@ -132,8 +129,7 @@ body {
   font-weight: 700;
 }
 
-.sheet-total th,
-.sheet-total td {
+.sheet-total th, .sheet-total td {
   background: rgba(14, 2, 49, 0.4431372549);
   text-align: center;
   color: #0b0f19;
@@ -206,16 +202,12 @@ body::before {
 .bg-prix .table.sheet > :not(caption) > * > *:last-child {
   border-right: 0;
 }
-.bg-prix .sheet-head > th,
-.bg-prix .sheet-subhead th {
+.bg-prix .sheet-head > th, .bg-prix .sheet-subhead th {
   border-right: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 /* PRIX */
-.bg-prix .sheet-subhead > th:first-child {
-  text-align: center !important;
-  vertical-align: middle;
-}
+.bg-prix .sheet-subhead > th:first-child,
 .bg-prix .sheet-subhead + tr > th:first-child {
   text-align: center !important;
   vertical-align: middle;
@@ -227,7 +219,7 @@ body::before {
 }
 
 /* ===========================
-   RANKING 
+   RANKING
    =========================== */
 .bg-ranking .ranking-podium .podium-card {
   position: relative;
@@ -353,7 +345,7 @@ body::before {
   }
 }
 
-/* RANKING:  */
+/* RANKING: apariencias en dark */
 .bg-ranking .ranking-podium .podium-card {
   background: rgba(7, 0, 48, 0.438);
   backdrop-filter: blur(6px);
@@ -361,8 +353,7 @@ body::before {
   border-color: rgba(255, 255, 255, 0.18);
   color: #ffffff;
 }
-.bg-ranking .ranking-podium .podium-card .podium-body .pos,
-.bg-ranking .ranking-podium .podium-card .podium-body .name {
+.bg-ranking .ranking-podium .podium-card .podium-body .pos, .bg-ranking .ranking-podium .podium-card .podium-body .name {
   color: #ffffff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
 }
@@ -384,7 +375,7 @@ body::before {
   color: #0b0f19;
 }
 
-/* ===== RANKING ===== */
+/* ===== Efectos ranking ===== */
 .bg-ranking .ribbon {
   position: absolute;
   left: 0.75rem;
@@ -494,6 +485,7 @@ body::before {
   transform: translateY(-1px);
 }
 
+/* ===== Layout pegajoso del footer ===== */
 html, body {
   height: 100%;
 }
@@ -515,4 +507,26 @@ html, body {
   border-right: 0;
   border-bottom: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ===== Comentarios (Giscus) ===== */
+#comentarios .glassy, #comentarios .glassy-hover, #comentarios .footer {
+  overflow: hidden;
+}
+
+/* El iframe lo inyecta giscus con clase .giscus-frame */
+.giscus,
+.giscus-frame {
+  display: block;
+  width: 100%;
+  min-height: 380px; /* ajusta si quieres más alto */
+  border: 0;
+  background: transparent;
+}
+
+/* Respeta el tema del sistema (oscuro/claro) */
+@media (prefers-color-scheme: dark) {
+  .giscus, .giscus-frame {
+    color-scheme: dark;
+  }
 }/*# sourceMappingURL=styles.css.map */
